@@ -14,7 +14,7 @@ public class ClickHelpUiTest {
     public void clickOnHelp(){
         WebDriverManager.chromedriver().setup();
         WebDriver webDriver = new ChromeDriver();
-        webDriver.get("https://gorest.co.in/");
+        webDriver.get("https://gorest.co.in");
         webDriver.manage().window().setSize(new Dimension(1900,1000));
         webDriver.findElement(By.xpath("//a[@class='nav-link'][contains(.,'Help')]")).click();
         assertThat(webDriver.findElement(By.xpath("//h1[@class='text-center mb-3'][contains(.,'Questions and Answers')]")).getText())
